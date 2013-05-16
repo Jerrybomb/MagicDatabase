@@ -6,6 +6,13 @@ import java.util.Scanner;
  2012-2013 Semester two
  Centennial High School
  */
+
+/*
+  Ryan Butler
+  Computer Science 30
+  2012-2013 Semester 30
+  Centennial High School
+ */
 public class MagicInterface 
 {
 	public static Scanner kbReader;
