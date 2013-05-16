@@ -6,20 +6,10 @@ public class Creature extends Card {
 	
 	private String CreatureType="";
 
-	/**
-	 * @param manaCost
-	 * @param abilityManaCost
-	 * @param name
-	 * @param flavorText
-	 * @param ability
-	 * @param power
-	 * @param toughness
-	 * @param creatureType
-	 */
-	public Creature(int manaCost, int abilityManaCost, String name,
-			String flavorText, String ability, int power, int toughness,
+	public Creature(String name, String flavorText, String ability,
+			int abilityManaCost, int manaCost, int power, int toughness,
 			String creatureType) {
-		super(manaCost, abilityManaCost, name, flavorText, ability);
+		super(name, flavorText, ability, abilityManaCost, manaCost);
 		Power = power;
 		Toughness = toughness;
 		CreatureType = creatureType;
@@ -48,6 +38,8 @@ public class Creature extends Card {
 	public void setCreatureType(String creatureType) {
 		CreatureType = creatureType;
 	}
-	
+
+
+
 	
 }
