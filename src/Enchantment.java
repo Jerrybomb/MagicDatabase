@@ -5,12 +5,11 @@ public class Enchantment extends Card
 	//update PLOXURZ
 	private String EnchantType="";
 
-	public Enchantment(String name, String ability, int abilityManaCost,
-			int redManaCost, int blueManaCost, int greenManaCost,
+	public Enchantment(String name, String ability, int redManaCost, int blueManaCost, int greenManaCost,
 			int whiteManaCost, int blackManaCost, int colourlessManaCost,
 			String enchantType) 
 	{
-		super(name, ability, abilityManaCost, redManaCost, blueManaCost,
+		super(name, ability, redManaCost, blueManaCost,
 				greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost);
 		EnchantType = enchantType;
 	}

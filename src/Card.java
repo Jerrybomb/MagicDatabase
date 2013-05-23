@@ -5,7 +5,6 @@ public class Card {
 	private String Name="";
 	private String Ability="";
 	
-	private int AbilityManaCost;
 	private int RedManaCost;
 	private int BlueManaCost;
 	private int GreenManaCost;
@@ -13,14 +12,12 @@ public class Card {
 	private int BlackManaCost;
 	private int ColourlessManaCost;
 	
-	public Card(String name, String ability, int abilityManaCost,
-			int redManaCost, int blueManaCost, int greenManaCost,
+	public Card(String name, String ability, int redManaCost, int blueManaCost, int greenManaCost,
 			int whiteManaCost, int blackManaCost, int colourlessManaCost) 
 	{
 		super();
 		Name = name;
 		Ability = ability;
-		AbilityManaCost = abilityManaCost;
 		RedManaCost = redManaCost;
 		BlueManaCost = blueManaCost;
 		GreenManaCost = greenManaCost;
@@ -49,16 +46,7 @@ public class Card {
 	{
 		Ability = ability;
 	}
-	public int getAbilityManaCost() 
-	
-	{
-		return AbilityManaCost;
-	}
-	public void setAbilityManaCost(int abilityManaCost) 
-	
-	{
-		AbilityManaCost = abilityManaCost;
-	}
+
 	public int getRedManaCost() 
 	
 	{

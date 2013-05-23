@@ -7,11 +7,10 @@ public class Creature extends Card {
 	
 	private String CreatureType="";
 
-	public Creature(String name, String ability, int abilityManaCost,
-			int redManaCost, int blueManaCost, int greenManaCost,
+	public Creature(String name, String ability, int redManaCost, int blueManaCost, int greenManaCost,
 			int whiteManaCost, int blackManaCost, int colourlessManaCost,
 			int power, int toughness, String creatureType) {
-		super(name, ability, abilityManaCost, redManaCost, blueManaCost,
+		super(name, ability, redManaCost, blueManaCost,
 				greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost);
 		Power = power;
 		Toughness = toughness;
