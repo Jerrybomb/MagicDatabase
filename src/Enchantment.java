@@ -3,9 +3,9 @@ public class Enchantment extends Card {
 
 	private String EnchantType="";
 
-	public Enchantment(String name, String flavorText, String ability,
+	public Enchantment(String name, String ability,
 			int abilityManaCost, int manaCost, String enchantType) {
-		super(name, flavorText, ability, abilityManaCost, manaCost);
+		super(name, ability, abilityManaCost, manaCost);
 		EnchantType = enchantType;
 	}
 
