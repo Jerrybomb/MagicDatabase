@@ -61,7 +61,7 @@ public class MagicInterface
 		typeOption = kbReader.nextInt();
 		if (typeOption == 1)
 		{
-			
+			CreatureInput();
 			
 		}
 		else if (typeOption == 2)
@@ -84,48 +84,16 @@ public class MagicInterface
 		{
 			
 		}
-		kbReader = new Scanner(System.in);
-		cardType = kbReader.nextLine();
-		System.out.println(cardType + " Name");
-		kbReader = new Scanner(System.in);
-		cardName = kbReader.nextLine();
-		System.out.println(cardType + " Mana cost:");
-		System.out.println("Red Mana:");
-		kbReader = new Scanner(System.in);
-		r = kbReader.nextInt();
-		System.out.println("Blue Mana: ");
-		kbReader = new Scanner(System.in);
-		u = kbReader.nextInt();
-		System.out.println("Green Mana: ");
-		kbReader = new Scanner(System.in);
-		g = kbReader.nextInt();
-		System.out.println("White Mana: ");
-		kbReader = new Scanner(System.in);
-		w = kbReader.nextInt();
-		System.out.println("Black Mana: ");
-		kbReader = new Scanner(System.in);
-		b = kbReader.nextInt();
-		System.out.println("Colourless Mana: ");
-		kbReader = new Scanner(System.in);
-		x = kbReader.nextInt();
-		System.out.println(cardType + " Subtype: ");
-		kbReader = new Scanner(System.in);
-		cardSubtype = kbReader.nextLine();
-		System.out.println(cardType + " Abilities: ");
-		kbReader = new Scanner(System.in);
-		cardAbility = kbReader.nextLine();
-		System.out.println("");
-		System.out.println("Return to menu?");
 		
-		if (menuOption == "yes")
-		{
-			//Return to main();
-		}
-		else if (menuOption == "no")
-		{
-			return;
-		}
+
 	}
+	
+	public static void CreatureInput()
+	{
+		Creature Cr1 = new Creature(Piggles)
+	}
+	
+	
 	
 	public static void MagicOutput()
 	{
@@ -190,3 +158,5 @@ public class MagicInterface
 		}
 	}
 }
+
+
