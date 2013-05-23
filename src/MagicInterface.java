@@ -46,11 +46,44 @@ public class MagicInterface
 	public static void MagicInput()
 	{
 		String menuOption = null;
-		String cardType, cardName, cardSubtype, cardAbility;
-		int r, u, g, w, b, x;
+		int typeOption;
+		String cardType;
 		System.out.println("Add a card:");
 		System.out.println("");
 		System.out.println("What type of card are you adding?");
+		System.out.println("1. Creature");
+		System.out.println("2. Sorcery");
+		System.out.println("3. Instant");
+		System.out.println("4. Enchantment");
+		System.out.println("5. Artifact");
+		System.out.println("6. Land");
+		kbReader = new Scanner(System.in);
+		typeOption = kbReader.nextInt();
+		if (typeOption == 1)
+		{
+			
+			
+		}
+		else if (typeOption == 2)
+		{
+			
+		}
+		else if (typeOption == 3)
+		{
+			
+		}
+		else if (typeOption == 4)
+		{
+			
+		}
+		else if (typeOption == 5)
+		{
+			
+		}
+		else if (typeOption == 6)
+		{
+			
+		}
 		kbReader = new Scanner(System.in);
 		cardType = kbReader.nextLine();
 		System.out.println(cardType + " Name");
@@ -97,8 +130,7 @@ public class MagicInterface
 	public static void MagicOutput()
 	{
 		int menuOption;
-		String cardType, cardName, cardSubtype, cardAbility;
-		int r, u, g, w, b, x;
+		
 		System.out.println("Retrieve a card:");
 		System.out.println("");
 		System.out.println("How would you like to search for a card?");
@@ -110,6 +142,7 @@ public class MagicInterface
 		
 		kbReader = new Scanner(System.in);
 		menuOption = kbReader.nextInt();
+		//Search by cardName
 		if (menuOption == 1)
 		{
 			System.out.println("What is the name of the card you are looking for?");
@@ -117,6 +150,7 @@ public class MagicInterface
 			cardName = kbReader.nextLine();
 			
 		}
+		
 		else if (menuOption == 2)
 		{
 			System.out.println("What is the type of the card you are looking for?");
@@ -124,6 +158,7 @@ public class MagicInterface
 			cardType = kbReader.nextLine();
 			
 		}
+		
 		else if (menuOption == 3)
 		{
 			System.out.println("What is the mana cost of the type you are looking for?");
@@ -145,6 +180,7 @@ public class MagicInterface
 			System.out.println("Colourless mana cost: ");
 			kbReader = new Scanner(System.in);
 			x = kbReader.nextInt();
+			
 		}
 		else if (menuOption == 4)
 		{
