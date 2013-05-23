@@ -1,6 +1,7 @@
 
 public class Creature extends Card {
 
+	//update PLOXURZ
 	private int Power;
 	private int Toughness;
 	

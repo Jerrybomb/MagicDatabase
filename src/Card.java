@@ -1,7 +1,7 @@
 
 public class Card {
 
-		
+	//update PLOXURZ
 	private String Name="";
 	private String Ability="";
 	
