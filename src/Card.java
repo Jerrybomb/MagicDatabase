@@ -6,48 +6,122 @@ public class Card {
 	private String Ability="";
 	
 	private int AbilityManaCost;
-	private int ManaCost;
+	private int RedManaCost;
+	private int BlueManaCost;
+	private int GreenManaCost;
+	private int WhiteManaCost;
+	private int BlackManaCost;
+	private int ColourlessManaCost;
 	
-	public Card(String name, String ability,
-			int abilityManaCost, int manaCost) {
+	public Card(String name, String ability, int abilityManaCost,
+			int redManaCost, int blueManaCost, int greenManaCost,
+			int whiteManaCost, int blackManaCost, int colourlessManaCost) 
+	{
 		super();
 		Name = name;
 		Ability = ability;
 		AbilityManaCost = abilityManaCost;
-		ManaCost = manaCost;
+		RedManaCost = redManaCost;
+		BlueManaCost = blueManaCost;
+		GreenManaCost = greenManaCost;
+		WhiteManaCost = whiteManaCost;
+		BlackManaCost = blackManaCost;
+		ColourlessManaCost = colourlessManaCost;
 	}
-
-	public String getName() {
+	
+	public String getName() 
+	
+	{
 		return Name;
 	}
-
-	public void setName(String name) {
+	public void setName(String name) 
+	
+	{
 		Name = name;
 	}
-
-	public String getAbility() {
+	public String getAbility() 
+	
+	{
 		return Ability;
 	}
-
-	public void setAbility(String ability) {
+	public void setAbility(String ability) 
+	
+	{
 		Ability = ability;
 	}
-
-	public int getAbilityManaCost() {
+	public int getAbilityManaCost() 
+	
+	{
 		return AbilityManaCost;
 	}
-
-	public void setAbilityManaCost(int abilityManaCost) {
+	public void setAbilityManaCost(int abilityManaCost) 
+	
+	{
 		AbilityManaCost = abilityManaCost;
 	}
-
-	public int getManaCost() {
-		return ManaCost;
+	public int getRedManaCost() 
+	
+	{
+		return RedManaCost;
 	}
-
-	public void setManaCost(int manaCost) {
-		ManaCost = manaCost;
+	public void setRedManaCost(int redManaCost) 
+	
+	{
+		RedManaCost = redManaCost;
 	}
-
-			
+	public int getBlueManaCost() 
+	
+	{
+		return BlueManaCost;
+	}
+	public void setBlueManaCost(int blueManaCost) 
+	
+	{
+		BlueManaCost = blueManaCost;
+	}
+	public int getGreenManaCost() 
+	
+	{
+		return GreenManaCost;
+	}
+	public void setGreenManaCost(int greenManaCost) 
+	
+	{
+		GreenManaCost = greenManaCost;
+	}
+	public int getWhiteManaCost() 
+	
+	{
+		return WhiteManaCost;
+	}
+	public void setWhiteManaCost(int whiteManaCost)
+	
+	{
+		WhiteManaCost = whiteManaCost;
+	}
+	public int getBlackManaCost() 
+	
+	{
+		return BlackManaCost;
+	}
+	public void setBlackManaCost(int blackManaCost) 
+	
+	{
+		BlackManaCost = blackManaCost;
+	}
+	public int getColourlessManaCost() 
+	
+	{
+		return ColourlessManaCost;
+	}
+	public void setColourlessManaCost(int colourlessManaCost) 
+	
+	{
+		ColourlessManaCost = colourlessManaCost;
+	}
+	
+	
+	
 }
+	
+	
