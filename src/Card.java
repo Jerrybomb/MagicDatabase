@@ -1,5 +1,6 @@
 
-public class Card {
+public class Card 
+{
 
 	//update PLOXURZ
 	private String Name="";
