@@ -66,23 +66,23 @@ public class MagicInterface
 		}
 		else if (typeOption == 2)
 		{
-			
+			SorceryInput();
 		}
 		else if (typeOption == 3)
 		{
-			
+			InstantInput();
 		}
 		else if (typeOption == 4)
 		{
-			
+			EnchantmentInput();
 		}
 		else if (typeOption == 5)
 		{
-			
+			ArtifactInput();
 		}
 		else if (typeOption == 6)
 		{
-			
+			LandInput();
 		}
 		
 
@@ -90,15 +90,208 @@ public class MagicInterface
 	
 	public static void CreatureInput()
 	{
-		Creature Cr1 = new Creature(Piggles)
+		String creatureName, creatureAbility, creatureType;
+		int redManaCost,blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, power, toughness;
+		
+		System.out.println("Creature name: ");
+		kbReader = new Scanner(System.in);
+		creatureName = kbReader.nextLine();
+		
+		System.out.println("Creature ability: ");
+		kbReader = new Scanner(System.in);
+		creatureAbility = kbReader.nextLine();
+		
+		System.out.println("Red mana cost: ");
+		kbReader = new Scanner(System.in);
+		redManaCost = kbReader.nextInt();
+		
+		System.out.println("Blue mana cost: ");
+		kbReader = new Scanner(System.in);
+		blueManaCost = kbReader.nextInt();
+		
+		System.out.println("Green mana cost: ");
+		kbReader = new Scanner(System.in);
+		greenManaCost = kbReader.nextInt();
+		
+		System.out.println("White mana cost: ");
+		kbReader = new Scanner(System.in);
+		whiteManaCost = kbReader.nextInt();
+		
+		System.out.println("Black mana cost: ");
+		kbReader = new Scanner(System.in);
+		blackManaCost = kbReader.nextInt();
+		
+		System.out.println("Colourless mana cost: ");
+		kbReader = new Scanner(System.in);
+		colourlessManaCost = kbReader.nextInt();
+		
+		System.out.println("Creature's power: ");
+		kbReader = new Scanner(System.in);
+		power = kbReader.nextInt();
+		
+		System.out.println("Creature's toughness: ");
+		kbReader = new Scanner(System.in);
+		toughness = kbReader.nextInt();
+		
+		System.out.println("Creature type: ");
+		kbReader = new Scanner(System.in);
+		creatureType = kbReader.nextLine();
+		
+		Creature Cr1 = new Creature(creatureName, creatureAbility, redManaCost, blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, power, toughness, creatureType);
 	}
-	
-	
-	
+	public static void SorceryInput()
+	{
+		String sorceryName, sorceryAbility, sorceryType;
+		int redManaCost,blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost;
+		
+		System.out.println("Creature name: ");
+		kbReader = new Scanner(System.in);
+		sorceryName = kbReader.nextLine();
+		
+		System.out.println("Creature ability: ");
+		kbReader = new Scanner(System.in);
+		sorceryAbility = kbReader.nextLine();
+		
+		System.out.println("Red mana cost: ");
+		kbReader = new Scanner(System.in);
+		redManaCost = kbReader.nextInt();
+		
+		System.out.println("Blue mana cost: ");
+		kbReader = new Scanner(System.in);
+		blueManaCost = kbReader.nextInt();
+		
+		System.out.println("Green mana cost: ");
+		kbReader = new Scanner(System.in);
+		greenManaCost = kbReader.nextInt();
+		
+		System.out.println("White mana cost: ");
+		kbReader = new Scanner(System.in);
+		whiteManaCost = kbReader.nextInt();
+		
+		System.out.println("Black mana cost: ");
+		kbReader = new Scanner(System.in);
+		blackManaCost = kbReader.nextInt();
+		
+		System.out.println("Colourless mana cost: ");
+		kbReader = new Scanner(System.in);
+		colourlessManaCost = kbReader.nextInt();
+		
+		System.out.println("Creature type: ");
+		kbReader = new Scanner(System.in);
+		sorceryType = kbReader.nextLine();
+		
+		Sorcery Sr1 = new Sorcery(sorceryName, sorceryAbility, redManaCost, blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, sorceryType);
+	}
+	public static void InstantInput()
+	{
+		String instantName, instantAbility, instantType;
+		int redManaCost,blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost;
+		
+		System.out.println("Creature name: ");
+		kbReader = new Scanner(System.in);
+		instantName = kbReader.nextLine();
+		
+		System.out.println("Creature ability: ");
+		kbReader = new Scanner(System.in);
+		instantAbility = kbReader.nextLine();
+		
+		System.out.println("Red mana cost: ");
+		kbReader = new Scanner(System.in);
+		redManaCost = kbReader.nextInt();
+		
+		System.out.println("Blue mana cost: ");
+		kbReader = new Scanner(System.in);
+		blueManaCost = kbReader.nextInt();
+		
+		System.out.println("Green mana cost: ");
+		kbReader = new Scanner(System.in);
+		greenManaCost = kbReader.nextInt();
+		
+		System.out.println("White mana cost: ");
+		kbReader = new Scanner(System.in);
+		whiteManaCost = kbReader.nextInt();
+		
+		System.out.println("Black mana cost: ");
+		kbReader = new Scanner(System.in);
+		blackManaCost = kbReader.nextInt();
+		
+		System.out.println("Colourless mana cost: ");
+		kbReader = new Scanner(System.in);
+		colourlessManaCost = kbReader.nextInt();
+		
+		System.out.println("Creature type: ");
+		kbReader = new Scanner(System.in);
+		instantType = kbReader.nextLine();
+		
+		Instant In1 = new Instant(instantName, instantAbility, redManaCost, blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, instantType);
+	}
+	public static void ArtifactInput()
+	{
+		String artifactName, artifactAbility, artifactType;
+		int redManaCost,blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost;
+		
+		System.out.println("Creature name: ");
+		kbReader = new Scanner(System.in);
+		artifactName = kbReader.nextLine();
+		
+		System.out.println("Creature ability: ");
+		kbReader = new Scanner(System.in);
+		artifactAbility = kbReader.nextLine();
+		
+		System.out.println("Red mana cost: ");
+		kbReader = new Scanner(System.in);
+		redManaCost = kbReader.nextInt();
+		
+		System.out.println("Blue mana cost: ");
+		kbReader = new Scanner(System.in);
+		blueManaCost = kbReader.nextInt();
+		
+		System.out.println("Green mana cost: ");
+		kbReader = new Scanner(System.in);
+		greenManaCost = kbReader.nextInt();
+		
+		System.out.println("White mana cost: ");
+		kbReader = new Scanner(System.in);
+		whiteManaCost = kbReader.nextInt();
+		
+		System.out.println("Black mana cost: ");
+		kbReader = new Scanner(System.in);
+		blackManaCost = kbReader.nextInt();
+		
+		System.out.println("Colourless mana cost: ");
+		kbReader = new Scanner(System.in);
+		colourlessManaCost = kbReader.nextInt();
+		
+		System.out.println("Creature type: ");
+		kbReader = new Scanner(System.in);
+		artifactType = kbReader.nextLine();
+		
+		Artifact Ar1 = new Artifact(artifactName, artifactAbility, redManaCost, blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, artifactType);
+	}
+	public static void LandInput()
+	{
+		String landName, landAbility, landType;
+		int redManaCost = 0,blueManaCost = 0, greenManaCost = 0, whiteManaCost = 0, blackManaCost = 0, colourlessManaCost = 0;
+		
+		System.out.println("Creature name: ");
+		kbReader = new Scanner(System.in);
+		landName = kbReader.nextLine();
+		
+		System.out.println("Creature ability: ");
+		kbReader = new Scanner(System.in);
+		landAbility = kbReader.nextLine();
+		
+		System.out.println("Creature type: ");
+		kbReader = new Scanner(System.in);
+		landType = kbReader.nextLine();
+		
+		Land Ln1 = new Land(landName, landAbility, redManaCost, blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, landType);
+	}
+
 	public static void MagicOutput()
 	{
 		int menuOption;
-		
+		String cardName;
 		System.out.println("Retrieve a card:");
 		System.out.println("");
 		System.out.println("How would you like to search for a card?");
@@ -115,8 +308,7 @@ public class MagicInterface
 		{
 			System.out.println("What is the name of the card you are looking for?");
 			kbReader = new Scanner(System.in);
-			cardName = kbReader.nextLine();
-			
+			cardName = kbReader.nextLine();			
 		}
 		
 		else if (menuOption == 2)
