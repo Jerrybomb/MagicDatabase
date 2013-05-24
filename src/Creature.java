@@ -1,5 +1,6 @@
 
-public class Creature extends Card {
+public class Creature extends Card 
+{
 
 	//update PLOXURZ
 	private int Power;
@@ -9,7 +10,8 @@ public class Creature extends Card {
 
 	public Creature(String name, String ability, int redManaCost, int blueManaCost, int greenManaCost,
 			int whiteManaCost, int blackManaCost, int colourlessManaCost,
-			int power, int toughness, String creatureType) {
+			int power, int toughness, String creatureType) 
+	{
 		super(name, ability, redManaCost, blueManaCost,
 				greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost);
 		Power = power;
@@ -17,27 +19,33 @@ public class Creature extends Card {
 		CreatureType = creatureType;
 	}
 
-	public int getPower() {
+	public int getPower() 
+	{
 		return Power;
 	}
 
-	public void setPower(int power) {
+	public void setPower(int power) 
+	{
 		Power = power;
 	}
 
-	public int getToughness() {
+	public int getToughness() 
+	{
 		return Toughness;
 	}
 
-	public void setToughness(int toughness) {
+	public void setToughness(int toughness)
+	{
 		Toughness = toughness;
 	}
 
-	public String getCreatureType() {
+	public String getCreatureType()
+	{
 		return CreatureType;
 	}
 
-	public void setCreatureType(String creatureType) {
+	public void setCreatureType(String creatureType) 
+	{
 		CreatureType = creatureType;
 	}
 
