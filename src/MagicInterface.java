@@ -225,6 +225,49 @@ public class MagicInterface
 		
 		Instant In1 = new Instant(instantName, instantAbility, redManaCost, blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, instantType);
 	}
+	public static void EnchantmentInput()
+	{
+		String enchantmentName, enchantmentAbility, enchantmentType;
+		int redManaCost,blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost;
+		
+		System.out.println("Creature name: ");
+		kbReader = new Scanner(System.in);
+		enchantmentName = kbReader.nextLine();
+		
+		System.out.println("Creature ability: ");
+		kbReader = new Scanner(System.in);
+		enchantmentAbility = kbReader.nextLine();
+		
+		System.out.println("Red mana cost: ");
+		kbReader = new Scanner(System.in);
+		redManaCost = kbReader.nextInt();
+		
+		System.out.println("Blue mana cost: ");
+		kbReader = new Scanner(System.in);
+		blueManaCost = kbReader.nextInt();
+		
+		System.out.println("Green mana cost: ");
+		kbReader = new Scanner(System.in);
+		greenManaCost = kbReader.nextInt();
+		
+		System.out.println("White mana cost: ");
+		kbReader = new Scanner(System.in);
+		whiteManaCost = kbReader.nextInt();
+		
+		System.out.println("Black mana cost: ");
+		kbReader = new Scanner(System.in);
+		blackManaCost = kbReader.nextInt();
+		
+		System.out.println("Colourless mana cost: ");
+		kbReader = new Scanner(System.in);
+		colourlessManaCost = kbReader.nextInt();
+		
+		System.out.println("Creature type: ");
+		kbReader = new Scanner(System.in);
+		enchantmentType = kbReader.nextLine();
+		
+		Enchantment En1 = new Enchantment(enchantmentName, enchantmentAbility, redManaCost, blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, enchantmentType);
+	}
 	public static void ArtifactInput()
 	{
 		String artifactName, artifactAbility, artifactType;
