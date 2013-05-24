@@ -15,6 +15,7 @@ import java.util.Scanner;
 public class MagicInterface 
 {
 	public static Scanner kbReader;
+	private static String creatureSave;
 	public static void main (String[]args)
 	{
 		int menuOption;
@@ -45,9 +46,7 @@ public class MagicInterface
 	
 	public static void MagicInput()
 	{
-		String menuOption = null;
 		int typeOption;
-		String cardType;
 		System.out.println("Add a card:");
 		System.out.println("");
 		System.out.println("What type of card are you adding?");
@@ -90,6 +89,7 @@ public class MagicInterface
 	
 	public static void CreatureInput()
 	{
+		int menuOption;
 		String creatureName, creatureAbility, creatureType;
 		int redManaCost,blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, power, toughness;
 		
@@ -137,10 +137,30 @@ public class MagicInterface
 		kbReader = new Scanner(System.in);
 		creatureType = kbReader.nextLine();
 		
-		Creature Cr1 = new Creature(creatureName, creatureAbility, redManaCost, blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, power, toughness, creatureType);
+		System.out.println("What would you like this creature saved as?");
+		kbReader = new Scanner(System.in);
+		creatureSave = kbReader.nextLine();
+		Creature creatureSave = new Creature(creatureName, creatureAbility, redManaCost, blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, power, toughness, creatureType);
+		
+		//Return to main menu
+		System.out.println("");
+		System.out.println("Return to menu?");
+		System.out.println("1. Yes");
+		System.out.println("2. No");
+		kbReader = new Scanner(System.in);
+		menuOption = kbReader.nextInt();
+		if (menuOption == 1)
+		{
+			main(null);
+		}
+		else if (menuOption == 2)
+		{
+			return;
+		}
 	}
 	public static void SorceryInput()
 	{
+		int menuOption;
 		String sorceryName, sorceryAbility, sorceryType;
 		int redManaCost,blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost;
 		
@@ -181,9 +201,26 @@ public class MagicInterface
 		sorceryType = kbReader.nextLine();
 		
 		Sorcery Sr1 = new Sorcery(sorceryName, sorceryAbility, redManaCost, blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, sorceryType);
+		
+		//Return to main menu
+		System.out.println("");
+		System.out.println("Return to menu?");
+		System.out.println("1. Yes");
+		System.out.println("2. No");
+		kbReader = new Scanner(System.in);
+		menuOption = kbReader.nextInt();
+		if (menuOption == 1)
+		{
+			main(null);
+		}
+		else if (menuOption == 2)
+		{
+			return;
+		}
 	}
 	public static void InstantInput()
 	{
+		int menuOption;
 		String instantName, instantAbility, instantType;
 		int redManaCost,blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost;
 		
@@ -224,9 +261,26 @@ public class MagicInterface
 		instantType = kbReader.nextLine();
 		
 		Instant In1 = new Instant(instantName, instantAbility, redManaCost, blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, instantType);
+	
+		//Return to main menu
+		System.out.println("");
+		System.out.println("Return to menu?");
+		System.out.println("1. Yes");
+		System.out.println("2. No");
+		kbReader = new Scanner(System.in);
+		menuOption = kbReader.nextInt();
+		if (menuOption == 1)
+		{
+			main(null);
+		}
+		else if (menuOption == 2)
+		{
+			return;
+		}
 	}
 	public static void EnchantmentInput()
 	{
+		int menuOption;
 		String enchantmentName, enchantmentAbility, enchantmentType;
 		int redManaCost,blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost;
 		
@@ -267,9 +321,26 @@ public class MagicInterface
 		enchantmentType = kbReader.nextLine();
 		
 		Enchantment En1 = new Enchantment(enchantmentName, enchantmentAbility, redManaCost, blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, enchantmentType);
+		
+		//Return to main menu
+		System.out.println("");
+		System.out.println("Return to menu?");
+		System.out.println("1. Yes");
+		System.out.println("2. No");
+		kbReader = new Scanner(System.in);
+		menuOption = kbReader.nextInt();
+		if (menuOption == 1)
+		{
+			main(null);
+		}
+		else if (menuOption == 2)
+		{
+			return;
+		}
 	}
 	public static void ArtifactInput()
 	{
+		int menuOption;
 		String artifactName, artifactAbility, artifactType;
 		int redManaCost,blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost;
 		
@@ -310,9 +381,26 @@ public class MagicInterface
 		artifactType = kbReader.nextLine();
 		
 		Artifact Ar1 = new Artifact(artifactName, artifactAbility, redManaCost, blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, artifactType);
+		
+		//Return to main menu
+		System.out.println("");
+		System.out.println("Return to menu?");
+		System.out.println("1. Yes");
+		System.out.println("2. No");
+		kbReader = new Scanner(System.in);
+		menuOption = kbReader.nextInt();
+		if (menuOption == 1)
+		{
+			main(null);
+		}
+		else if (menuOption == 2)
+		{
+			return;
+		}
 	}
 	public static void LandInput()
 	{
+		int menuOption;
 		String landName, landAbility, landType;
 		int redManaCost = 0,blueManaCost = 0, greenManaCost = 0, whiteManaCost = 0, blackManaCost = 0, colourlessManaCost = 0;
 		
@@ -329,6 +417,22 @@ public class MagicInterface
 		landType = kbReader.nextLine();
 		
 		Land Ln1 = new Land(landName, landAbility, redManaCost, blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, landType);
+		
+		//Return to main menu
+		System.out.println("");
+		System.out.println("Return to menu?");
+		System.out.println("1. Yes");
+		System.out.println("2. No");
+		kbReader = new Scanner(System.in);
+		menuOption = kbReader.nextInt();
+		if (menuOption == 1)
+		{
+			main(null);
+		}
+		else if (menuOption == 2)
+		{
+			return;
+		}
 	}
 
 	public static void MagicOutput()
@@ -351,7 +455,11 @@ public class MagicInterface
 		{
 			System.out.println("What is the name of the card you are looking for?");
 			kbReader = new Scanner(System.in);
-			cardName = kbReader.nextLine();			
+			cardName = kbReader.nextLine();	
+			if (cardName == String.)
+			{
+				
+			}
 		}
 		
 		else if (menuOption == 2)
@@ -390,6 +498,21 @@ public class MagicInterface
 			System.out.println("What is the ability keyword of the card you are looking for?");
 			kbReader = new Scanner(System.in);
 			cardAbility = kbReader.nextLine();
+		}
+		//Return to main menu
+		System.out.println("");
+		System.out.println("Return to menu?");
+		System.out.println("1. Yes");
+		System.out.println("2. No");
+		kbReader = new Scanner(System.in);
+		menuOption = kbReader.nextInt();
+		if (menuOption == 1)
+		{
+			main(null);
+		}
+		else if (menuOption == 2)
+		{
+			return;
 		}
 	}
 }
