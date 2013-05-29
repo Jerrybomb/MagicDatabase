@@ -47,7 +47,5 @@ public class Creature extends Card
 	public void setCreatureType(String creatureType) 
 	{
 		CreatureType = creatureType;
-	}
-
-	
+	}	
 }

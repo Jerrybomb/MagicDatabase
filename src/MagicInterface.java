@@ -63,6 +63,7 @@ public class MagicInterface
 		System.out.println("6. Land");
 		kbReader = new Scanner(System.in);
 		typeOption = kbReader.nextInt();
+		
 		if (typeOption == 1)
 		{
 			CreatureInput();
@@ -88,8 +89,6 @@ public class MagicInterface
 		{
 			LandInput();
 		}
-		
-
 	}
 	
 	public static void CreatureInput()
@@ -462,42 +461,81 @@ public class MagicInterface
 
 	public static void MagicOutput()
 	{
-		int menuOption;
-		String cardName;
+		int menuOption, r, u, g, w, b, x;
+		String cardName, cardType, cardAbility;
 		System.out.println("Retrieve a card:");
 		System.out.println("");
-		System.out.println("How would you like to search for a card?");
-		System.out.println("");
-		System.out.println("1. Search by name");
-		System.out.println("2. Search by type");
-		System.out.println("3. Search by Mana cost");
-		System.out.println("4. Search by ability");
-		
+		System.out.println("What is the type of card you are looking for?");
+		System.out.println("1. Creature");
+		System.out.println("2. Sorcery");
+		System.out.println("3. Instant");
+		System.out.println("4. Enchantment");
+		System.out.println("5. Artifact");
+		System.out.println("6. Land");
 		kbReader = new Scanner(System.in);
 		menuOption = kbReader.nextInt();
-		//Search by cardName
+
 		if (menuOption == 1)
 		{
-			System.out.println("What is the name of the card you are looking for?");
+			System.out.println("Please enter the creature card's save name.");
 			kbReader = new Scanner(System.in);
 			cardName = kbReader.nextLine();	
-			if (cardName == String.)
+			if (cardName == creatureSave)
 			{
+				System.out.println();
 				
+			}
+			else if (cardName != creatureSave)
+			{
+				System.out.println("No card of that name has been saved.");
+				System.out.println("Would you like to save a card now?");
+				System.out.println("1. Yes");
+				System.out.println("2. No");
+				kbReader = new Scanner(System.in);
+				menuOption = kbReader.nextInt();
+				if (menuOption == 1)
+				{
+					MagicInput();
+				}
+				else if (menuOption == 2)
+				{
+					return;
+				}
 			}
 		}
 		
 		else if (menuOption == 2)
 		{
-			System.out.println("What is the type of the card you are looking for?");
+			System.out.println("Please enter the sorcery card's save name.");
 			kbReader = new Scanner(System.in);
 			cardType = kbReader.nextLine();
+			if (cardType == Card.class.toString())
+			{
+				
+			}
+			else if (cardType != Card.class.toString())
+			{
+				System.out.println("No card of that type has been saved.");
+				System.out.println("Would you like to save a card now?");
+				System.out.println("1. Yes");
+				System.out.println("2. No");
+				kbReader = new Scanner(System.in);
+				menuOption = kbReader.nextInt();
+				if (menuOption == 1)
+				{
+					MagicInput();
+				}
+				else if (menuOption == 2)
+				{
+					return;
+				}
+			}
 			
 		}
 		
 		else if (menuOption == 3)
 		{
-			System.out.println("What is the mana cost of the type you are looking for?");
+			System.out.println("Please enter the instant card's save name.?");
 			System.out.println("Red mana cost: ");
 			kbReader = new Scanner(System.in);
 			r = kbReader.nextInt();
@@ -515,15 +553,95 @@ public class MagicInterface
 			b = kbReader.nextInt();
 			System.out.println("Colourless mana cost: ");
 			kbReader = new Scanner(System.in);
-			x = kbReader.nextInt();
-			
+			x = kbReader.nextInt();			
 		}
+		
 		else if (menuOption == 4)
 		{
-			System.out.println("What is the ability keyword of the card you are looking for?");
+			System.out.println("Please enter the enchantment card's save name.");
 			kbReader = new Scanner(System.in);
 			cardAbility = kbReader.nextLine();
+			if (cardAbility == Card.class.toString())
+			{
+				
+			}
+			else if (cardAbility != Card.class.toString())
+			{
+				System.out.println("No card with that ability has been saved.");
+				System.out.println("Would you like to save a card now?");
+				System.out.println("1. Yes");
+				System.out.println("2. No");
+				kbReader = new Scanner(System.in);
+				menuOption = kbReader.nextInt();
+				if (menuOption == 1)
+				{
+					MagicInput();
+				}
+				else if (menuOption == 2)
+				{
+					return;
+				}
+			}
 		}
+		
+		else if (menuOption == 5)
+		{
+			System.out.println("Please enter the artifact card's save name.");
+			kbReader = new Scanner(System.in);
+			cardType = kbReader.nextLine();
+			if (cardType == Card.class.toString())
+			{
+				
+			}
+			else if (cardType != Card.class.toString())
+			{
+				System.out.println("No card of that type has been saved.");
+				System.out.println("Would you like to save a card now?");
+				System.out.println("1. Yes");
+				System.out.println("2. No");
+				kbReader = new Scanner(System.in);
+				menuOption = kbReader.nextInt();
+				if (menuOption == 1)
+				{
+					MagicInput();
+				}
+				else if (menuOption == 2)
+				{
+					return;
+				}
+			}
+			
+		}
+		
+		else if (menuOption == 6)
+		{
+			System.out.println("Please enter the land card's save name.");
+			kbReader = new Scanner(System.in);
+			cardType = kbReader.nextLine();
+			if (cardType == Card.class.toString())
+			{
+				
+			}
+			else if (cardType != Card.class.toString())
+			{
+				System.out.println("No card of that type has been saved.");
+				System.out.println("Would you like to save a card now?");
+				System.out.println("1. Yes");
+				System.out.println("2. No");
+				kbReader = new Scanner(System.in);
+				menuOption = kbReader.nextInt();
+				if (menuOption == 1)
+				{
+					MagicInput();
+				}
+				else if (menuOption == 2)
+				{
+					return;
+				}
+			}
+			
+		}
+		
 		//Return to main menu
 		System.out.println("");
 		System.out.println("Return to menu?");
