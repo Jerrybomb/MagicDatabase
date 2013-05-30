@@ -109,7 +109,23 @@ public class Card
 		ColourlessManaCost = colourlessManaCost;
 	}
 	
-	
+	public void totalManaCost()
+	{
+		int r = getRedManaCost();
+		int u = getBlueManaCost();
+		int g = getGreenManaCost();
+		int w = getWhiteManaCost();
+		int b = getBlackManaCost();
+		
+		System.out.print(getColourlessManaCost());
+		
+		if (r >= 0)
+		{
+			System.out.print("R");
+			
+		}
+		
+	}
 	
 }
 	

@@ -15,12 +15,12 @@ import java.util.Scanner;
 public class MagicInterface 
 {
 	public static Scanner kbReader;
-	private static String creatureSave;
-	private static String sorcerySave;
-	private static String instantSave;
-	private static String enchantmentSave;
-	private static String artifactSave;
-	private static String landSave;	
+	public static String creatureSave;
+	public static String sorcerySave;
+	public static String instantSave;
+	public static String enchantmentSave;
+	public static String artifactSave;
+	public static String landSave;	
 	private static String cardName;
 	public static void main (String[]args)
 	{
