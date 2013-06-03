@@ -124,7 +124,26 @@ public class Card
 			System.out.print("R");
 			
 		}
-		
+		if (u >= 0)
+		{
+			System.out.print("U");
+			
+		}
+		if (g >= 0)
+		{
+			System.out.print("G");
+			
+		}
+		if (w >= 0)
+		{
+			System.out.print("W");
+			
+		}
+		if (b >= 0)
+		{
+			System.out.print("B");
+			
+		}
 	}
 	
 }
