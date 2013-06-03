@@ -15,12 +15,6 @@ import java.util.Scanner;
 public class MagicInterface 
 {
 	public static Scanner kbReader;
-	public static String creatureSave;
-	public static String sorcerySave;
-	public static String instantSave;
-	public static String enchantmentSave;
-	public static String artifactSave;
-	public static String landSave;	
 	private static String cardName;
 	public static void main (String[]args)
 	{
@@ -95,44 +89,55 @@ public class MagicInterface
 	public static void CreatureInput()
 	{
 		int menuOption;
-		String creatureName, creatureAbility, creatureType;
-		int redManaCost,blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, power, toughness;
+		String creatureName = null, creatureAbility = null, creatureType = null;
+		int redManaCost = 0,blueManaCost = 0, greenManaCost = 0, whiteManaCost = 0, blackManaCost = 0, colourlessManaCost = 0, power = 0, toughness = 0;
 		
+		Creature Cr1 = new Creature(creatureName, creatureAbility, redManaCost, blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, power, toughness, creatureType);
+
 		System.out.println("Creature name: ");
 		kbReader = new Scanner(System.in);
 		creatureName = kbReader.nextLine();
+		Cr1.setName(creatureName);
 		
 		System.out.println("Creature ability: ");
 		kbReader = new Scanner(System.in);
 		creatureAbility = kbReader.nextLine();
+		Cr1.setAbility(creatureAbility);
 		
 		System.out.println("Red mana cost: ");
 		kbReader = new Scanner(System.in);
 		redManaCost = kbReader.nextInt();
+		Cr1.setRedManaCost(redManaCost);
 		
 		System.out.println("Blue mana cost: ");
 		kbReader = new Scanner(System.in);
 		blueManaCost = kbReader.nextInt();
+		Cr1.setBlueManaCost(blueManaCost);
 		
 		System.out.println("Green mana cost: ");
 		kbReader = new Scanner(System.in);
 		greenManaCost = kbReader.nextInt();
+		Cr1.setGreenManaCost(greenManaCost);
 		
 		System.out.println("White mana cost: ");
 		kbReader = new Scanner(System.in);
 		whiteManaCost = kbReader.nextInt();
+		Cr1.setWhiteManaCost(whiteManaCost);
 		
 		System.out.println("Black mana cost: ");
 		kbReader = new Scanner(System.in);
 		blackManaCost = kbReader.nextInt();
+		Cr1.setBlackManaCost(blackManaCost);
 		
 		System.out.println("Colourless mana cost: ");
 		kbReader = new Scanner(System.in);
 		colourlessManaCost = kbReader.nextInt();
+		Cr1.setColourlessManaCost(colourlessManaCost);
 		
 		System.out.println("Creature's power: ");
 		kbReader = new Scanner(System.in);
 		power = kbReader.nextInt();
+		Cr1.setPower(power);
 		
 		System.out.println("Creature's toughness: ");
 		kbReader = new Scanner(System.in);
@@ -141,10 +146,7 @@ public class MagicInterface
 		System.out.println("Creature type: ");
 		kbReader = new Scanner(System.in);
 		creatureType = kbReader.nextLine();
-		
-		creatureSave = creatureName;
-		Creature creatureSave = new Creature(creatureName, creatureAbility, redManaCost, blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, power, toughness, creatureType);
-		
+				
 		//Return to main menu
 		System.out.println("");
 		System.out.println("Return to menu?");
@@ -164,7 +166,7 @@ public class MagicInterface
 	public static void SorceryInput()
 	{
 		int menuOption;
-		String sorceryName, sorceryAbility, sorceryType;
+		String sorceryName, sorceryAbility, sorceryType, sorcerySave;
 		int redManaCost,blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost;
 		
 		System.out.println("Sorcery name: ");
@@ -205,7 +207,7 @@ public class MagicInterface
 	
 		sorcerySave = sorceryName;
 		
-		Sorcery sorcerySave = new Sorcery(sorceryName, sorceryAbility, redManaCost, blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, sorceryType);
+		Sorcery Sr1 = new Sorcery(sorceryName, sorceryAbility, redManaCost, blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, sorceryType);
 		
 		//Return to main menu
 		System.out.println("");
@@ -226,7 +228,7 @@ public class MagicInterface
 	public static void InstantInput()
 	{
 		int menuOption;
-		String instantName, instantAbility, instantType;
+		String instantName, instantAbility, instantType, instantSave;
 		int redManaCost,blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost;
 		
 		System.out.println("Instant name: ");
@@ -288,7 +290,7 @@ public class MagicInterface
 	public static void EnchantmentInput()
 	{
 		int menuOption;
-		String enchantmentName, enchantmentAbility, enchantmentType;
+		String enchantmentName, enchantmentAbility, enchantmentType, enchantmentSave;
 		int redManaCost,blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost;
 		
 		System.out.println("Enchantment name: ");
@@ -352,7 +354,7 @@ public class MagicInterface
 	public static void ArtifactInput()
 	{
 		int menuOption;
-		String artifactName, artifactAbility, artifactType;
+		String artifactName, artifactAbility, artifactType, artifactSave;
 		int redManaCost,blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost;
 		
 		System.out.println("Artifact name: ");
@@ -414,7 +416,7 @@ public class MagicInterface
 	public static void LandInput()
 	{
 		int menuOption;
-		String landName, landAbility, landType;
+		String landName, landAbility, landType, landSave;
 		int redManaCost = 0,blueManaCost = 0, greenManaCost = 0, whiteManaCost = 0, blackManaCost = 0, colourlessManaCost = 0;
 		
 		System.out.println("Land name: ");
@@ -469,7 +471,6 @@ public class MagicInterface
 		if (menuOption == 1)
 		{
 			CreatureOutput();
-			
 		}
 		
 		else if (menuOption == 2)
@@ -504,12 +505,12 @@ public class MagicInterface
 		System.out.println("Please enter the creature card's save name.");
 		kbReader = new Scanner(System.in);
 		cardName = kbReader.nextLine();	
-		if (cardName == creatureSave)
+		if (cardName == Cr1.getName())
 		{
-			System.out.println();
+			System.out.println(Cr1.getName());
 			
 		}
-		else if (cardName != creatureSave)
+		else if (cardName != Card.getName())
 		{
 			System.out.println("No card of that name has been saved.");
 			System.out.println("Would you like to save this card now?");
@@ -534,11 +535,11 @@ public class MagicInterface
 		System.out.println("Please enter the sorcery card's save name.");
 		kbReader = new Scanner(System.in);
 		cardName = kbReader.nextLine();
-		if (cardName == Card.class.toString())
+		if (cardName == Card.getName())
 		{
 			
 		}
-		else if (cardName != Card.class.toString())
+		else if (cardName != Card.getName())
 		{
 			System.out.println("No card of that type has been saved.");
 			System.out.println("Would you like to save this card now?");
@@ -563,11 +564,11 @@ public class MagicInterface
 		System.out.println("Please enter the instant card's save name.");
 		kbReader = new Scanner(System.in);
 		cardName = kbReader.nextLine();
-		if (cardName == Card.class.toString())
+		if (cardName == Card.getName())
 		{
 			
 		}
-		else if (cardName != Card.class.toString())
+		else if (cardName != Card.getName())
 		{
 			System.out.println("No card of that type has been saved.");
 			System.out.println("Would you like to save this card now?");
@@ -591,11 +592,11 @@ public class MagicInterface
 		System.out.println("Please enter the enchantment card's save name.");
 		kbReader = new Scanner(System.in);
 		cardName = kbReader.nextLine();
-		if (cardName == Card.class.toString())
+		if (cardName == Card.getName())
 		{
 			
 		}
-		else if (cardName != Card.class.toString())
+		else if (cardName != Card.getName())
 		{
 			System.out.println("No card with that ability has been saved.");
 			System.out.println("Would you like to save this card now?");
@@ -620,11 +621,11 @@ public class MagicInterface
 		System.out.println("Please enter the artifact card's save name.");
 		kbReader = new Scanner(System.in);
 		cardName = kbReader.nextLine();
-		if (cardName == Card.class.toString())
+		if (cardName == Card.getName())
 		{
 			
 		}
-		else if (cardName != Card.class.toString())
+		else if (cardName != Card.getName())
 		{
 			System.out.println("No card with that ability has been saved.");
 			System.out.println("Would you like to save this card now?");
@@ -648,11 +649,14 @@ public class MagicInterface
 		System.out.println("Please enter the land card's save name.");
 		kbReader = new Scanner(System.in);
 		cardName = kbReader.nextLine();
-		if (cardName == Card.class.toString())
+		if (cardName == Card.getName())
 		{
-			
+			System.out.println("Land name: " + Card.getName());
+			System.out.println("Land ability: " + Card.getAbility());
+			System.out.println("Land Mana Cost: ");Card.totalManaCost();
+			System.out.println("Land type: " + Land.getLandType());
 		}
-		else if (cardName != Card.class.toString())
+		else if (cardName != Card.getName())
 		{
 			System.out.println("No card of that type has been saved.");
 			System.out.println("Would you like to save this card now?");

@@ -12,7 +12,7 @@ public class Instant extends Card
 				whiteManaCost, blackManaCost, colourlessManaCost);
 		InstantAbility = instantAbility;
 	}
-
+	
 	public String getInstantAbility()
 	{
 		return InstantAbility;
