@@ -137,7 +137,7 @@ public class Card
 		if (w >= 0)
 		{
 			System.out.print("W");
-			
+
 		}
 		if (b >= 0)
 		{

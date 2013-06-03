@@ -142,9 +142,7 @@ public class MagicInterface
 		kbReader = new Scanner(System.in);
 		creatureType = kbReader.nextLine();
 		
-		System.out.println("What would you like this creature saved as?");
-		kbReader = new Scanner(System.in);
-		creatureSave = kbReader.nextLine();
+		creatureSave = creatureName;
 		Creature creatureSave = new Creature(creatureName, creatureAbility, redManaCost, blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, power, toughness, creatureType);
 		
 		//Return to main menu
@@ -204,10 +202,8 @@ public class MagicInterface
 		System.out.println("Sorcery type: ");
 		kbReader = new Scanner(System.in);
 		sorceryType = kbReader.nextLine();
-		
-		System.out.println("What would you like this Sorcery saved as?");
-		kbReader = new Scanner(System.in);
-		sorcerySave = kbReader.nextLine();
+	
+		sorcerySave = sorceryName;
 		
 		Sorcery sorcerySave = new Sorcery(sorceryName, sorceryAbility, redManaCost, blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, sorceryType);
 		
@@ -268,10 +264,8 @@ public class MagicInterface
 		System.out.println("Instant type: ");
 		kbReader = new Scanner(System.in);
 		instantType = kbReader.nextLine();
-		
-		System.out.println("What would you like this instant saved as?");
-		kbReader = new Scanner(System.in);
-		instantSave = kbReader.nextLine();
+	
+		instantSave = instantName;
 		
 		Instant In1 = new Instant(instantName, instantAbility, redManaCost, blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, instantType);
 	
@@ -335,7 +329,7 @@ public class MagicInterface
 		
 		System.out.println("What would you like this Enchantment saved as?");
 		kbReader = new Scanner(System.in);
-		enchantmentSave = kbReader.nextLine();
+		enchantmentSave = enchantmentName;
 		
 		Enchantment En1 = new Enchantment(enchantmentName, enchantmentAbility, redManaCost, blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, enchantmentType);
 		
@@ -397,9 +391,7 @@ public class MagicInterface
 		kbReader = new Scanner(System.in);
 		artifactType = kbReader.nextLine();
 		
-		System.out.println("What would you like this artifact saved as?");
-		kbReader = new Scanner(System.in);
-		artifactSave = kbReader.nextLine();
+		artifactSave = artifactName;
 		
 		Artifact Ar1 = new Artifact(artifactName, artifactAbility, redManaCost, blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, artifactType);
 		
@@ -436,10 +428,8 @@ public class MagicInterface
 		System.out.println("Land type: ");
 		kbReader = new Scanner(System.in);
 		landType = kbReader.nextLine();
-		
-		System.out.println("What would you like this land saved as?");
-		kbReader = new Scanner(System.in);
-		landSave = kbReader.nextLine();
+
+		landSave = landName;
 		
 		Land Ln1 = new Land(landName, landAbility, redManaCost, blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, landType);
 		
