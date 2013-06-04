@@ -122,27 +122,31 @@ public class Card
 		if (r >= 0)
 		{
 			System.out.print("R");
-			
+			r = r - 1;	
 		}
+		
 		if (u >= 0)
 		{
 			System.out.print("U");
-			
+			u = u - 1;
 		}
+		
 		if (g >= 0)
 		{
 			System.out.print("G");
-			
+			g = g - 1;
 		}
+		
 		if (w >= 0)
 		{
 			System.out.print("W");
-
+			w = w - 1;
 		}
+		
 		if (b >= 0)
 		{
 			System.out.print("B");
-			
+			b = b - 1;
 		}
 	}
 	

@@ -2,6 +2,7 @@
 public class Creature extends Card 
 {
 
+	public static Object Cr1;
 	//update PLOXURZ
 	private int Power;
 	private int Toughness;
