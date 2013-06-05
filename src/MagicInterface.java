@@ -528,7 +528,7 @@ public class MagicInterface
 		System.out.println("Please enter the creature card's save name.");
 		kbReader = new Scanner(System.in);
 		cardName = kbReader.nextLine();	
-		if (cardName == (((Card) Creature.Cr1).getName()))
+		if (cardName.equals(((Card) Creature.Cr1).getName()));
 		{
 			System.out.println("Creature Card Information: ");
 			System.out.println("Name: " + ((Card) Creature.Cr1).getName());
@@ -536,7 +536,7 @@ public class MagicInterface
 			System.out.print("Mana cost: "); 
 			System.out.println("");
 		}
-		else if (cardName != ((Card) Creature.Cr1).getName())
+		if (!cardName.equals(((Card) Creature.Cr1).getName()));
 		{
 			System.out.println("No card of that name has been saved.");
 			System.out.println("Would you like to save this card now?");
