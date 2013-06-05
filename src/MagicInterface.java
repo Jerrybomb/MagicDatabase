@@ -533,8 +533,8 @@ public class MagicInterface
 			System.out.println("Creature Card Information: ");
 			System.out.println("Name: " + ((Card) Creature.Cr1).getName());
 			System.out.println("Ability: " + ((Card)Creature.Cr1).getAbility());
-			System.out.print("Mana cost: "); Cr1.totalManaCost();
-			
+			System.out.print("Mana cost: "); 
+			System.out.println("");
 		}
 		else if (cardName != ((Card) Creature.Cr1).getName())
 		{
@@ -553,7 +553,21 @@ public class MagicInterface
 				return;
 			}
 		}
-		
+		//Return to main menu
+		System.out.println("");
+		System.out.println("Return to menu?");
+		System.out.println("1. Yes");
+		System.out.println("2. No");
+		kbReader = new Scanner(System.in);
+		menuOption = kbReader.nextInt();
+		if (menuOption == 1)
+		{
+			main(null);
+		}
+		else if (menuOption == 2)
+		{
+			return;
+		}	
 	}
 	public static void SorceryOutput()
 	{
