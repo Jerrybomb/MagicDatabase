@@ -13,39 +13,40 @@ import java.util.Scanner;
   Centennial High School
  */
 public class MagicInterface 
-{
+{	//Global variables for input
 	public static Scanner kbReader;
 	private static String cardName;
 	public static void main (String[]args)
-	{
-		
+	{	//Variables
 		int menuOption;
+		
 		System.out.println("What would you like to do?");
 		System.out.println("");
 		System.out.println("1. Add a card");
 		System.out.println("2. Retrieve a card");
 		System.out.println("3. Quit");
 		System.out.println("");
+		//Input
 		kbReader = new Scanner(System.in);
 		menuOption = kbReader.nextInt();
 		if (menuOption == 1)
 		{
-			MagicInput();
+			MagicInput();//Option for card input
 			
 		}
 		else if (menuOption == 2)
 		{
-			MagicOutput();
+			MagicOutput();//Option for card output
 			
 		}
 		else if (menuOption == 3)
 		{
-			return;
+			return;//Terminates program
 		}
 	}
 	
 	public static void MagicInput()
-	{
+	{//Variables
 		int typeOption;
 		
 		System.out.println("Add a card:");
@@ -59,7 +60,7 @@ public class MagicInterface
 		System.out.println("6. Land");
 		kbReader = new Scanner(System.in);
 		typeOption = kbReader.nextInt();
-		
+		//Sets options for each card type's input
 		if (typeOption == 1)
 		{
 			CreatureInput();
@@ -87,13 +88,13 @@ public class MagicInterface
 	}
 	
 	public static void CreatureInput()
-	{
+	{//Variables
 		int menuOption;
 		String creatureName = null, creatureAbility = null, creatureType = null;
 		int redManaCost = 0,blueManaCost = 0, greenManaCost = 0, whiteManaCost = 0, blackManaCost = 0, colourlessManaCost = 0, power = 0, toughness = 0;
-		
+		//Object
 		Creature Cr1 = new Creature(creatureName, creatureAbility, redManaCost, blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, power, toughness, creatureType);
-
+		//Input
 		System.out.println("Creature name: ");
 		kbReader = new Scanner(System.in);
 		creatureName = kbReader.nextLine();
@@ -166,13 +167,13 @@ public class MagicInterface
 		}
 	}
 	public static void SorceryInput()
-	{
+	{	//Variables
 		int menuOption;
 		String sorceryName = null, sorceryAbility = null, sorceryType = null;
 		int redManaCost = 0,blueManaCost = 0, greenManaCost = 0, whiteManaCost = 0, blackManaCost = 0, colourlessManaCost = 0;
-		
+		//Object
 		Sorcery Sr1 = new Sorcery(sorceryName, sorceryAbility, redManaCost, blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, sorceryType);
-
+		//Input
 		System.out.println("Sorcery name: ");
 		kbReader = new Scanner(System.in);
 		sorceryName = kbReader.nextLine();
@@ -234,13 +235,13 @@ public class MagicInterface
 		}
 	}
 	public static void InstantInput()
-	{
+	{	//Variables
 		int menuOption;
 		String instantName = null, instantAbility = null, instantType = null;
 		int redManaCost = 0,blueManaCost = 0, greenManaCost = 0, whiteManaCost = 0, blackManaCost = 0, colourlessManaCost = 0;
-		
+		//Object
 		Instant In1 = new Instant(instantName, instantAbility, redManaCost, blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, instantType);
-
+		//Input
 		System.out.println("Instant name: ");
 		kbReader = new Scanner(System.in);
 		instantName = kbReader.nextLine();
@@ -298,13 +299,13 @@ public class MagicInterface
 		}
 	}
 	public static void EnchantmentInput()
-	{
+	{	//Variables
 		int menuOption;
 		String enchantmentName = null, enchantmentAbility = null, enchantmentType = null;
 		int redManaCost = 0,blueManaCost = 0, greenManaCost = 0, whiteManaCost = 0, blackManaCost = 0, colourlessManaCost = 0;
-		
+		//Object
 		Enchantment En1 = new Enchantment(enchantmentName, enchantmentAbility, redManaCost, blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, enchantmentType);
-
+		//Variables
 		System.out.println("Enchantment name: ");
 		kbReader = new Scanner(System.in);
 		enchantmentName = kbReader.nextLine();
@@ -367,13 +368,13 @@ public class MagicInterface
 		}
 	}
 	public static void ArtifactInput()
-	{
+	{	//Variables
 		int menuOption;
 		String artifactName = null, artifactAbility = null, artifactType = null;
 		int redManaCost = 0,blueManaCost = 0, greenManaCost = 0, whiteManaCost = 0, blackManaCost = 0, colourlessManaCost = 0;
-		
+		//Object
 		Artifact Ar1 = new Artifact(artifactName, artifactAbility, redManaCost, blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, artifactType);
-
+		//Input
 		System.out.println("Artifact name: ");
 		kbReader = new Scanner(System.in);
 		artifactName = kbReader.nextLine();
@@ -436,13 +437,13 @@ public class MagicInterface
 		}
 	}
 	public static void LandInput()
-	{
+	{	//Variables
 		int menuOption;
 		String landName = null, landAbility = null, landType = null;
 		int redManaCost = 0,blueManaCost = 0, greenManaCost = 0, whiteManaCost = 0, blackManaCost = 0, colourlessManaCost = 0;
-		
+		//Object
 		Land Ln1 = new Land(landName, landAbility, redManaCost, blueManaCost, greenManaCost, whiteManaCost, blackManaCost, colourlessManaCost, landType);
-
+		//Input
 		System.out.println("Land name: ");
 		kbReader = new Scanner(System.in);
 		landName = kbReader.nextLine();
@@ -476,7 +477,7 @@ public class MagicInterface
 	}
 
 	public static void MagicOutput()
-	{
+	{	//Variables
 		int menuOption;
 		
 		System.out.println("Retrieve a card:");
@@ -490,7 +491,7 @@ public class MagicInterface
 		System.out.println("6. Land");
 		kbReader = new Scanner(System.in);
 		menuOption = kbReader.nextInt();
-
+		//Menu for card type outputs
 		if (menuOption == 1)
 		{
 			CreatureOutput();
@@ -523,13 +524,13 @@ public class MagicInterface
 			
 	}
 	public static void CreatureOutput()
-	{
+	{	//Variables
 		int menuOption;
 		System.out.println("Please enter the creature card's save name.");
 		kbReader = new Scanner(System.in);
 		cardName = kbReader.nextLine();	
-		if (cardName.equals(((Card) Creature.Cr1).getName()));
-		{
+		if (cardName.equals(((Card) Creature.Cr1).getName()));//Checks whether input equals stored name
+		{//If the check succeeds, the card's information is printed
 			System.out.println("Creature Card Information: ");
 			System.out.println("Name: " + ((Card) Creature.Cr1).getName());
 			System.out.println("Ability: " + ((Card)Creature.Cr1).getAbility());
@@ -537,7 +538,7 @@ public class MagicInterface
 			System.out.println("");
 		}
 		if (!cardName.equals(((Card) Creature.Cr1).getName()));
-		{
+		{//If not, gives a prompt to enter the card type's input
 			System.out.println("No card of that name has been saved.");
 			System.out.println("Would you like to save this card now?");
 			System.out.println("1. Yes");
